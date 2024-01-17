@@ -1,4 +1,4 @@
-**Serve HTML and Preview files from GitHub.**
+**Get and Preview files from GitHub**
 
 <br>
 
@@ -7,15 +7,3 @@
 </a>
 
 <br><hr><br>
-
-**URL:**
-
-https://zazerconer.github.io/preview `?https://file.html`
-
-<br>
-
-- Example:
-
-`https://zazerconer.github.io/preview?https://github.com/username/repo/main/index.html`
-
-<br>
