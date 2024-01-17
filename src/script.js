@@ -1,3 +1,4 @@
+ready(()=> {
   content(Body, `
     <div id="opt">
       <textarea id="view" readonly></textarea>
