@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+::selection {
+  color: #fafaff;
+  background: #0354AF;
+}
+::-webkit-selection {
+  color: #fafaff;
+  background: #0354AF;
+}
+::-moz-selection {
+  color: #fafaff;
+  background: #0354AF;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px;
+  fontSize: 1.1em;
+  background: -webkit-linear-gradient(#fff, #eee);
+  background: -moz-linear-gradient(#fff, #eee);
+  background: linear-gradient(#fff, #eee);
+  user-select: none;
+}
+#header a {
+  display: inline-block;
+  text-decoration: none;
+  cursor: auto;
+}
+#header span b {
+  color: #0354AF;
+  font-size: 1.2em;
+}
+#header .container-input {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#header #label {
+  color: #222;
+  font-size: 1em;
+  margin: auto 5px auto 15px;
+}
+#header #target {
+  color: #0354AF;
+  display: inline-block;
+  padding: 5px;
+  margin: auto 5px auto 0;
+  box-shadow: 0 0 0 1px grey;
+  cursor: pointer;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(#fff, #eee, #ddd);
+  background: -moz-linear-gradient(#fff, #eee, #ddd);
+  background: linear-gradient(#fff, #eee, #ddd);
+  font-weight: 500;
+}
+#header #input-url {
+  width: 35vw;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px; 
+  overflow: auto;
+  color: #222;
+  box-shadow: 0 0 0 1px grey;
+  border-radius: 3px;
+}
+#header #input-url[type=url]:focus {
+  box-shadow: 0 0 0 1px #0354AF;
+}
+#header #preview {
+  color: #0354AF;
+  display: inline-block;
+  padding: 5px 10px;
+  box-shadow: 0 0 0 1px grey;
+  cursor: pointer;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(#fff, #eee, #ddd);
+  background: -moz-linear-gradient(#fff, #eee, #ddd);
+  background: linear-gradient(#fff, #eee, #ddd);
+  font-weight: 500;
+}
+
+#intro {
+  font-size: 1em;
+  color: #0354AF;
+  margin-top: 80px;
+  padding: 25px;
+  white-space: pre;
+  line-height: 2;
+  overflow: auto;
+}
+
+#opt {
+  position: fixed;
+  top: 85px;
+  left: 5%;
+  right: 5%;
+  bottom: 20px;
+  margin: auto;
+  display: none;
+  border-radius: 4.5px;
+  -webkit-box-shadow: 0 0 3px 1px #666;
+  -moz-box-shadow: 0 0 3px 1px #666;
+  box-shadow: 0 0 3px 1px #666;
+  overflow: hidden;
+  background: transparent;
+}
+#opt #view {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Consolas, monospace;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: rgba(3, 84, 175, 0.8);
+  padding: 25px;
+  border: 0;
+  outline: none;
+  line-height: 1.4;
+  white-space: pre;
+  overflow: scroll;
+  resize: none;
+  background: #eee;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px 1px #666;
+  -moz-box-shadow: 0 0 3px 1px #666;
+  box-shadow: 0 0 3px 1px #666;
+  scrollbar-gutter: stable;
+}
+#opt #view::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#opt #view::-webkit-scrollbar-thumb {
+  background: rgba(3, 84, 175, 0.8);
+  border-radius: 5px;
+}
+#opt #view::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+#opt #view::-webkit-scrollbar-corner {
+  background: #eee;
+  border-radius: 5px;
+}
+#opt #view::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+#opt #view::-moz-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#opt #view::-moz-scrollbar-thumb {
+  background: rgba(3, 84, 175, 0.8);
+  border-radius: 5px;
+}
+#opt #view::-moz-scrollbar-track {
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+#opt #view::-moz-scrollbar-corner {
+  background: #eee;
+  border-radius: 5px;
+}
+#opt #view::-moz-scrollbar-thumb:hover {
+  background: #666;
+}
+
+@media screen and (max-width:600px) {
+  #header {
+    padding: 20px 20px;
+  }
+  #header span b {
+    font-size: 1em;
+  }
+  #header #label {
+    margin: auto 5px auto 10px;
+  }
+  #header #input-url {
+    width: 50%;
+    margin-right: 5px; 
+  }
+  #opt #view {
+    font-size: 0.75em;
+  }
+}
