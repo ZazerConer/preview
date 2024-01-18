@@ -36,7 +36,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 25px 30px;
-  fontSize: 1.1em;
   background: -webkit-linear-gradient(#fff, #eee);
   background: -moz-linear-gradient(#fff, #eee);
   background: linear-gradient(#fff, #eee);
@@ -49,7 +48,7 @@ body {
 }
 #header span b {
   color: #0354AF;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 #header .container-input {
   display: flex;
@@ -58,52 +57,63 @@ body {
 }
 #header #label {
   color: #222;
-  font-size: 1em;
+  font-size: 0.9em;
   margin: auto 5px auto 15px;
 }
 #header #target {
   color: #0354AF;
+  font-size: 0.8em;
   display: inline-block;
-  padding: 5px;
+  padding: 5px 8px;
   margin: auto 5px auto 0;
   box-shadow: 0 0 0 1px grey;
   cursor: pointer;
   border-radius: 3px;
   background: -webkit-linear-gradient(#fff, #eee, #ddd);
   background: -moz-linear-gradient(#fff, #eee, #ddd);
+  background: -ms-linear-gradient(#fff, #eee, #ddd);
+  background: -o-linear-gradient(#fff, #eee, #ddd);
   background: linear-gradient(#fff, #eee, #ddd);
   font-weight: 500;
 }
 #header #input-url {
   width: 35vw;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 5px 12px;
   margin-right: 10px; 
   overflow: auto;
   color: #222;
+  font-size: 0.8em;
+  -webkit-box-shadow: 0 0 0 1px grey;
+  -moz-box-shadow: 0 0 0 1px grey;
   box-shadow: 0 0 0 1px grey;
   border-radius: 3px;
 }
 #header #input-url[type=url]:focus {
+  -webkit-box-shadow: 0 0 0 1px #0354AF;
+  -moz-box-shadow: 0 0 0 1px #0354AF;
   box-shadow: 0 0 0 1px #0354AF;
 }
 #header #preview {
   color: #0354AF;
+  font-size: 0.8em;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 5px 12px;
   box-shadow: 0 0 0 1px grey;
   cursor: pointer;
   border-radius: 3px;
   background: -webkit-linear-gradient(#fff, #eee, #ddd);
   background: -moz-linear-gradient(#fff, #eee, #ddd);
+  background: -ms-linear-gradient(#fff, #eee, #ddd);
+  background: -o-linear-gradient(#fff, #eee, #ddd);
   background: linear-gradient(#fff, #eee, #ddd);
   font-weight: 500;
 }
 
 #intro {
-  font-size: 1em;
+  font-size: 0.95em;
   color: #0354AF;
-  margin-top: 80px;
+  margin-top: 90px;
   padding: 25px;
   white-space: pre;
   line-height: 2;
@@ -112,7 +122,7 @@ body {
 
 #opt {
   position: fixed;
-  top: 85px;
+  top: 90px;
   left: 5%;
   right: 5%;
   bottom: 20px;
@@ -130,7 +140,7 @@ body {
   height: 100%;
   box-sizing: border-box;
   font-family: Consolas, monospace;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: 700;
   color: rgba(3, 84, 175, 0.8);
   padding: 25px;
@@ -175,7 +185,7 @@ body {
   border-radius: 5px;
 }
 #opt #view::-moz-scrollbar-track {
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 #opt #view::-moz-scrollbar-corner {
@@ -188,19 +198,42 @@ body {
 
 @media screen and (max-width:600px) {
   #header {
-    padding: 20px 20px;
+    padding: 18px 20px;
   }
   #header span b {
-    font-size: 1em;
+    font-size: 0.8em;
+  }
+  #header .container-input {
+    gap: 5px;
   }
   #header #label {
     margin: auto 5px auto 10px;
+    font-size: 0.8em;
   }
   #header #input-url {
     width: 50%;
     margin-right: 5px; 
+    font-size: 0.7em;
+    padding: 5px 8px;
+  }
+  #header #target {
+    font-size: 0.75em;
+    padding: 5px 4px;
+  }
+  #header #preview {
+    font-size: 0.75em;
+    padding: 5px 8px;
   }
   #opt #view {
-    font-size: 0.75em;
+    color: rgba(3, 84, 175, 1);
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  #intro {
+    font-size: 0.85em;
+    margin-top: 85px;
+  }
+  #opt {
+    top: 100px;
   }
 }
